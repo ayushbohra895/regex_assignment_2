@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE> REPLACE</TITLE>
+        
+        <script>
+            function myFunction() {
+                var text = document.getElementById("word").value;
+                var word = document.getElementById("input-word").value;
+                var rword = document.getElementById("replace-word").value;
+                
+                var edit = text.replaceAll(word, rword);
+                document.getElementById("after-edit").innerHTML = " " + edit;
+            }
+        </script>
+	</HEAD>
+	<BODY>
+        
+        <form id="form-id" method="POST" onsubmit="myFunction(); return false;">
+            <table>
+                <tr>
+                    <td> Enter text</td>
+                    <td>
+                        <input type="text" id="word">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter word to replace:</td>
+                    <td>
+                        <input type="text" id="input-word">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter word to be replaced with</td>
+                    <td>
+                        <input type="text" id="replace-word">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="submit-button">
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+       
+        <p id="after-edit"></p>
+	</BODY>
+</HTML>
